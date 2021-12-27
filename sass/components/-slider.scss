@@ -6,14 +6,10 @@
 
   overflow: hidden;
 
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-light, 0.1),
-    rgba($color-primary-dark, 0.1)
-  );
+  background-color: transparent;
   border-bottom: solid 1px rgba($color-secondary-dark, 0.1);
   border-radius: 5px;
-  box-shadow: 1px 2px 5px 3px rgba($color-secondary-dark, 0.1);
+  // box-shadow: 1px 2px 5px 3px rgba($color-secondary-dark, 0.1);
 
   &__btn {
     position: absolute;
@@ -21,9 +17,9 @@
     z-index: 10;
 
     border: none;
-    background: $color-grey-dark;
+    background: transparent;
     font-family: inherit;
-    color: $color-grey-dark-3;
+    color: $color-dark;
     border-radius: 50%;
     height: 5.5rem;
     width: 5.5rem;

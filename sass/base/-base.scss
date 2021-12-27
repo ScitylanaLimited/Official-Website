@@ -27,7 +27,7 @@ body {
   color: $color-dark;
   padding: 3rem;
   display: relative;
-  background-color: $color-dark;
+  background-color: $color-white;
   position: relative;
 
   @include respond(tab-port) {

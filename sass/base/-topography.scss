@@ -85,7 +85,7 @@ body {
 }
 .paragraph {
   font-size: $default-font-size;
-  color: $color-grey-light-2;
+  color: $color-grey-dark-3;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
@@ -95,7 +95,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: $color-grey-light-1;
+  color: $color-dark;
   @include respond(phone) {
     font-size: 2rem;
   }
