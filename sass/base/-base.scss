@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  color: $color-dark;
+  padding: 3rem;
+  display: relative;
+  background-color: $color-dark;
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+  @include respond(phone) {
+    padding: 0;
+    min-width: 100vw;
+  }
+}

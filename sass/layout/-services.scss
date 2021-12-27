@@ -1,0 +1,14 @@
+.section__services {
+  &--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+}

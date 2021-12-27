@@ -1,0 +1,102 @@
+body {
+  font-size: 1.6rem;
+  color: $color-grey-dark;
+  font-family: "Lato";
+  line-height: 1.7;
+  font-weight: 400;
+}
+.heading-primary {
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    line-height: 4.5rem;
+    letter-spacing: 2rem;
+    animation-name: moveleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin-bottom: 0.5rem;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.7rem;
+    line-height: 2.5rem;
+    animation-name: moveright;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+  }
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-grey-light-1, 0.3);
+  }
+}
+.heading-tertiary {
+  font-size: $default-font-size;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $color-secondary-dark;
+}
+.paragraph {
+  font-size: $default-font-size;
+  color: $color-grey-light-2;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+.heading-tertiary-2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $color-grey-light-1;
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
