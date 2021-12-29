@@ -1,6 +1,6 @@
 body {
   font-size: 1.6rem;
-  color: $color-grey-dark;
+  color: $color-dark;
   font-family: "Lato";
   line-height: 1.7;
   font-weight: 400;
@@ -85,7 +85,7 @@ body {
 }
 .paragraph {
   font-size: $default-font-size;
-  color: $color-grey-dark-3;
+  color: $color-dark;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
@@ -95,7 +95,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: $color-dark;
+  color: $color-white;
   @include respond(phone) {
     font-size: 2rem;
   }

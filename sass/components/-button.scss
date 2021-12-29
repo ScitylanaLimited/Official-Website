@@ -3,6 +3,12 @@
   position: relative;
   text-align: center;
   border-radius: 20rem;
+  text-decoration: none;
+
+  &--green {
+    text-decoration: none;
+    color: $color-white;
+  }
 
   &--white {
     background-color: $color-white;

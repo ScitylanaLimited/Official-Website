@@ -50,10 +50,10 @@
     list-style: none;
   }
 
-  &__item {
+  &__link {
     display: inline-block;
     cursor: pointer;
-    color: $color-grey-light-2;
+    color: $color-dark;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
@@ -105,7 +105,7 @@
 
       & p {
         font-size: 1.5rem;
-        color: $color-grey-light-2;
+        color: $color-dark;
         margin-right: 1.5rem;
       }
     }

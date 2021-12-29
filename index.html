@@ -59,11 +59,12 @@
         </h1>
         
         <div class="header__btn-container ">
-        <a href="#" class="btn btn--white btn--animation">Get Started</a>
+        <a  href="#popup" class="btn btn--white btn--animation">Get Started</a>
         <!-- <a href="#" class="btn btn--white btn--animation">Learn More</a> -->
         </div>
       </div>
     </header>
+    <main>
     <section class="section__services u-margin-top-big" id="services">
       <h2 class="heading-secondary u-margin-bottom-meduim"> Services </h2>
       <div class="section__services--container">
@@ -89,7 +90,7 @@
         </div>
         <div class="card__side card__side-back card__side-back-1">
           <div class="card__cta">
-            <a href="#popup" class="btn btn--white">Book Now!</a>
+            <a  href="#popup" class="btn btn--white">Book Now!</a>
           </div>
         </div>
       </div>
@@ -140,7 +141,7 @@
         </div>
         <div class="card__side card__side-back card__side-back-3">
           <div class="card__cta">
-            <a href="#popup" class="btn btn--white">Book Now!</a>
+            <a  href="#popup" class="btn btn--white">Book Now!</a>
           </div>
         </div>
       </div>
@@ -165,7 +166,7 @@
         </div>
         <div class="card__side card__side-back card__side-back-4">
           <div class="card__cta">
-            <a href="#popup" class="btn btn--white">Book Now!</a>
+            <a  href="#popup" class="btn btn--white">Book Now!</a>
           </div>
         </div>
       </div>
@@ -189,7 +190,7 @@
         </div>
         <div class="card__side card__side-back card__side-back-5">
           <div class="card__cta">
-            <a href="#popup" class="btn btn--white">Book Now!</a>
+            <a  href="#popup" class="btn btn--white">Book Now!</a>
           </div>
         </div>
       </div>
@@ -291,11 +292,11 @@
             Samuel	 Nsoedo	 (Jr)	 in	 the	 United	 Kingdoms.	 Scitylana has	 branched	 out	 into	 various	
             businesses such	as:</p>
             <ul class="about-list">
-              <li>IT	training	for	organizations	and	aspiring	professionals (Wise-Tutor).</li>
-              <li>Business	Advisory	Services.</li>
+              <li>IT	training	for	organizations	and	aspiring	professionals (Wise-Tutor)</li>
+              <li>Business	Advisory	Services</li>
               <li>Data	Science	and	Business	intelligence	services</li>
-              <li>Research	and	development.</li>
-              <li>Development	of	bespoke	applications	for	organizations.</li>
+              <li>Research	and	Development</li>
+              <li>Development	of	Bespoke	Applications	for	organizations</li>
             </ul>
         </div>
         <div class="section__about--set">
@@ -303,7 +304,7 @@
               Mission	Statement
           </h3>
           <p>Our	mission	is	 to	ensure	our	clients	growth	and	business	sustainability. We	proffer	
-            services	to	both	SME’s	and	larger	organizations,	ensuring	that	their	values	and	goals	
+            services	to	both	SME's	and	larger	organizations,	ensuring	that	their	values	and	goals	
             are	at	the	core	of	our	heart	in	delivering	our	services.</p>
         </div>
         <div class="section__about--set">
@@ -327,8 +328,12 @@
               <input type="text" id="name" class="contact__form--input" required>
             </div>
             <div class="contact__input--set">
-              <label for="email" class="contact__form--label">Your Email</label>
+              <label for="email" class="contact__form--label">Your Email Address</label>
             <input type="email" id="email" class="contact__form--input" required>
+            </div>
+            <div class="contact__input--set">
+              <label for="number" class="contact__form--label">Your Contact Number</label>
+            <input type="number" id="number" class="contact__form--input" required>
             </div>
             <div class="contact__input--set">
               <label for="message" class="contact__form--label">Your Message</label>
@@ -360,17 +365,18 @@
      </div> 
       <div class="footer__navigation">
         <ul class="footer__list">
-            <li class="footer__item team">Our Team</li>
-            <li class="footer__item contact">Contact Us</a</li>
-            <li class="footer__item careers">Careers</li>
-            <li class="footer__item privacy">Privacy policy</li>
+            <li class="footer__item"><a href="#ourTeam" class="footer__link">Our Team</a></li>
+            <li class="footer__item contact-footer"><a href="" class="footer__link">Contact Us</a></li>
+            <li class="footer__item"><a href="#careers" class="footer__link">Careers</a></li>
+            <li class="footer__item"><a href="#privacy" class="footer__link">Privacy policy</a></li>
         </ul>
     </div>
     </div>
     <div class="footer__socials">
       <p class="paragraph">Follow us on our Social Media Handles</p>
       <div class="footer__socials--icon">
-        <i class="fab fa-instagram"></i>
+        <a target="_blank" href="https://instagram.com/scitylana?utm_meduim=copy_link" ><i class="fab fa-instagram"></i></a>
+        
         <i class="fab fa-facebook-f"></i>
       </div>
     </div>
@@ -380,5 +386,52 @@
       <p></p>
     </div>
   </div>
+
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__left">
+        <figure class="figure"><img src="img/research.jpg" alt="Tour photo" class="figure__img"><figcaption class="figure__caption">Research</figcaption></figure>
+
+        <figure class="figure"><img src="img/application.jpg" alt="Tour photo" class="figure__img"><figcaption class="figure__caption">Application</figcaption></figure>
+        
+        <figure class="figure"><img src="img/advisory.jpg" alt="Tour photo" class="figure__img"><figcaption class="figure__caption">Buisness Advisory</figcaption></figure>
+
+        <figure class="figure"><img src="img/training.jpg" alt="Tour photo" class="figure__img"><figcaption class="figure__caption">Training</figcaption></figure>
+
+        <figure class="figure"><img src="img/datascience.jpg" alt="Tour photo" class="figure__img"><figcaption class="figure__caption">Data Analysis</figcaption></figure>
+        
+      </div>
+      <div class="popup__right">
+          <a href="#" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+            
+          <a target="-blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDKRCVVn50q-qJJrtePvxnLg0HZ5PtVmA1Icjoy28mpQUPlQ/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link&urp=gmail_link" class="btn btn--green">Book now</a>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="ourTeam" id="ourTeam">
+  <div class="popup__content">
+    <h2 class="heading-secondary u-color u-margin-bottom-meduim u-margin-top-big">Our Team</h2>
+
+    <a href="#section-tours" class="popup__close">&times;</a>
+      
+  </div>
+</div> -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/61c9f94dc82c976b71c3b4c8/1fnufbn4d';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>

@@ -2,14 +2,16 @@
 
 const btnMenu = document.querySelector(".navigation__icon");
 const nav = document.querySelector(".navigation__nav");
-const btnLogin = document.querySelector(".navigation__btn");
+// const btnLogin = document.querySelector(".navigation__btn");
 const btnContact = document.querySelector(".contact");
+const btnContactFooter = document.querySelector(".contact-footer");
 const btnAbout = document.querySelector(".about");
 const aboutUs = document.querySelector(".section__about");
 const contactUs = document.querySelector(".section__contact");
 const backBtnAbout = document.querySelector(".btn-back-about");
 const backBtnContact = document.querySelector(".btn-back-contact");
 const inputName = document.getElementById("name");
+// const nav = document.querySelector(".navigation");
 
 //Menu Icon functionality
 
@@ -24,12 +26,12 @@ btnMenu.addEventListener("click", function (e) {
     navDisplayed = true;
 
     nav.style.display = "flex";
-    btnLogin.style.display = "block";
+    // btnLogin.style.display = "block";
     btnMenu.innerHTML = `<i class="fas fa-times"></i>`;
   } else {
     navDisplayed = false;
     nav.style.display = "none";
-    btnLogin.style.display = "none";
+    // btnLogin.style.display = "none";
     btnMenu.innerHTML = `<i class="fas fa-bars"></i>`;
   }
   // if (!navDisplayed) return;
@@ -43,8 +45,7 @@ btnMenu.addEventListener("click", function (e) {
 
 //Contact Section Activation
 let contactDisplayed = false;
-
-btnContact.addEventListener("click", function (e) {
+const contactDisplay = function (e) {
   e.preventDefault();
   if (contactDisplayed === false) {
     contactDisplayed = true;
@@ -56,7 +57,10 @@ btnContact.addEventListener("click", function (e) {
   } else {
     contactDisplayed = false;
   }
-});
+};
+
+btnContact.addEventListener("click", contactDisplay);
+btnContactFooter.addEventListener("click", contactDisplay);
 
 //About Section Activation
 let aboutDisplayed = false;
@@ -183,3 +187,21 @@ const slider = function () {
   });
 };
 slider();
+
+// Menu fade animation
+const handleHover = function (e) {
+  if (e.target.classList.contains("navigation__nav-link")) {
+    const link = e.target;
+    const siblings = link
+      .closest(".navigation")
+      .querySelectorAll(".navigation__nav-link");
+    const logo = link.closest(".navigation").querySelector(".navigation__logo");
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));

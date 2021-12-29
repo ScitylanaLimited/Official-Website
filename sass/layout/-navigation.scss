@@ -70,6 +70,12 @@
 
     &-item {
       list-style: none;
+      &:hover {
+        color: $color-secondary-light;
+        box-shadow: 0 1rem 2rem rgba($color-grey-light-2, 0.4);
+        transform: rotate(0.7deg) scale(1.2);
+        border: none;
+      }
     }
 
     &-link {
