@@ -38,13 +38,13 @@ body {
     min-width: 100vw;
   }
 }
-main {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-secondary-dark, 0.2),
-      rgba($color-primary-dark, 0.2)
-    ),
-    url(/img/datascience.jpg);
-  background-position: center;
-  background-size: contain;
-}
+// main {
+//   background-image: linear-gradient(
+//       to right bottom,
+//       rgba($color-secondary-dark, 0.2),
+//       rgba($color-primary-dark, 0.2)
+//     ),
+//     url(/img/datascience.jpg);
+//   background-position: center;
+//   background-size: contain;
+// }

@@ -1,14 +1,26 @@
 {
-  "name": "scitylana",
+  "name": "c",
   "version": "1.0.0",
   "description": "landing page for scitylana",
   "main": "script.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css"
   },
   "author": "Faith Umunnakwe",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.1"
-  }
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.49.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaithChinonso/Scitylana-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FaithChinonso/Scitylana-/issues"
+  },
+  "homepage": "https://github.com/FaithChinonso/Scitylana-#readme"
 }

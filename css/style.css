@@ -34,11 +34,6 @@ body {
       padding: 0;
       min-width: 100vw; } }
 
-main {
-  background-image: linear-gradient(to right bottom, rgba(146, 6, 6, 0.2), rgba(104, 76, 16, 0.2)), url(/img/datascience.jpg);
-  background-position: center;
-  background-size: contain; }
-
 body {
   font-size: 1.6rem;
   color: #000;
@@ -619,7 +614,7 @@ body {
     border: none;
     background: transparent;
     font-family: inherit;
-    color: #fff;
+    color: #000;
     border-radius: 50%;
     height: 5.5rem;
     width: 5.5rem;
@@ -955,6 +950,7 @@ header {
     @media only screen and (max-width: 56.25em) {
       .navigation__nav {
         width: 90%;
+        height: 100vh;
         display: flex;
         justify-content: center; } }
     .navigation__nav-list {
@@ -1011,20 +1007,27 @@ header {
   display: flex;
   flex-direction: column;
   height: auto;
-  color: #fff;
+  color: #920606;
   font-size: 2rem; }
 
 .portfolio__heading--span {
   display: block;
   font-size: 2.2rem;
   margin-top: 1rem;
-  color: #fff; }
+  color: #920606; }
 
 .section__partner--container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .section__partner--container {
+      flex-direction: column; } }
+
+@media only screen and (max-width: 56.25em) {
+  .partners__logo {
+    transform: scale(0.7); } }
 
 .partners__logo--caption {
-  text-align: center; }
+  display: none; }
