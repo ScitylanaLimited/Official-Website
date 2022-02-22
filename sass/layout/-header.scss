@@ -1,19 +1,20 @@
 header {
-  height: 95vh;
+  height: 90vh;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-secondary-dark, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(/img/header.jpg);
+    url(img/header.jpg);
   background-position: top;
   background-size: cover;
   position: relative;
-  margin-top: 20vh;
+  margin-top: 10vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: hidden;
 
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -21,12 +22,12 @@ header {
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     only screen and (min-width: 125em) {
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-secondary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      ),
-      url(/img/header.jpg);
+    //   background-image: linear-gradient(
+    //       to right bottom,
+    //       rgba($color-secondary-light, 0.8),
+    //       rgba($color-primary-dark, 0.8)
+    //     ),
+    //     url(/img/header.jpg);
   }
 
   @include respond(phone) {
@@ -34,20 +35,35 @@ header {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
-  &__text-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-.header__btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
 
-  @include respond(phone) {
-    flex-direction: column;
-  }
+  // &__btn-container {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   gap: 2rem;
+
+  //   @include respond(phone) {
+  //     flex-direction: column;
+  //   }
+  // }
+}
+.header__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 100;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-secondary-dark, 0.4),
+    rgba($color-primary-dark, 0.4)
+  );
+  gap: 3rem;
+}
+.header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2000;
 }

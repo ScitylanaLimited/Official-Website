@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add live-server
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.17.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (internal/stream_base_commons.js:209:20)
+
+npm manifest: 
+  {
+    "name": "c",
+    "version": "1.0.0",
+    "description": "landing page for scitylana",
+    "main": "script.js",
+    "scripts": {
+      "compile:sass": "node-sass sass/main.scss css/style.css"
+    },
+    "author": "Faith Umunnakwe",
+    "license": "ISC",
+    "devDependencies": {
+      "node-sass": "^6.0.1"
+    },
+    "dependencies": {
+      "live-server": "^1.2.1",
+      "sass": "^1.49.8"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/FaithChinonso/Scitylana-.git"
+    },
+    "bugs": {
+      "url": "https://github.com/FaithChinonso/Scitylana-/issues"
+    },
+    "homepage": "https://github.com/FaithChinonso/Scitylana-#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

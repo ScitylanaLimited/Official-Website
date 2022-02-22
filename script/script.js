@@ -1,15 +1,27 @@
 "use strict";
 
 const btnMenu = document.querySelector(".navigation__icon");
-const nav = document.querySelector(".navigation__nav");
+const nav = document.querySelector(".responsive__nav");
+const navList1 = document.querySelector(".service");
+const navList2 = document.querySelector(".partner");
+const navList3 = document.querySelector(".portfolio");
 // const btnLogin = document.querySelector(".navigation__btn");
 const btnContact = document.querySelector(".contact");
+const btnContactRes = document.querySelector(".contact-res");
 const btnContactFooter = document.querySelector(".contact-footer");
+const btnAboutFooter = document.querySelector(".about-footer");
 const btnAbout = document.querySelector(".about");
+const btnCareer = document.querySelector(".career");
+const btnPricing = document.querySelector(".pricing");
+const btnAboutRes = document.querySelector(".about-res");
 const aboutUs = document.querySelector(".section__about");
+const careersDisplay = document.querySelector(".section__career");
+const pricingDisplay = document.querySelector(".section__pricing");
 const contactUs = document.querySelector(".section__contact");
 const backBtnAbout = document.querySelector(".btn-back-about");
 const backBtnContact = document.querySelector(".btn-back-contact");
+const backBtnCareer = document.querySelector(".btn-back-career");
+const backBtnPricing = document.querySelector(".btn-back-pricing");
 const inputName = document.getElementById("name");
 // const nav = document.querySelector(".navigation");
 
@@ -34,15 +46,17 @@ btnMenu.addEventListener("click", function (e) {
     // btnLogin.style.display = "none";
     btnMenu.innerHTML = `<i class="fas fa-bars"></i>`;
   }
-  // if (!navDisplayed) return;
-
-  // this.classList.add('.clicked');
-  // if(!clicked)
-  // nav.style.display = "flex";
-  // btnLogin.style.display = "block";
-  // btnMenu.innerHTML = `<i class="fas fa-times"></i>`;
 });
+const clicked = function (e) {
+  navDisplayed = false;
+  nav.style.display = "none";
+  btnMenu.innerHTML = `<i class="fas fa-bars"></i>`;
+  console.log("btnn clicked");
+};
 
+navList1.addEventListener("click", clicked);
+navList2.addEventListener("click", clicked);
+navList3.addEventListener("click", clicked);
 //Contact Section Activation
 let contactDisplayed = false;
 const contactDisplay = function (e) {
@@ -54,18 +68,21 @@ const contactDisplay = function (e) {
     contactUs.style.height = "80vh";
     inputName.focus();
     aboutUs.style.display = "none";
+    navDisplayed = false;
+    nav.style.display = "none";
+    btnMenu.innerHTML = `<i class="fas fa-bars"></i>`;
   } else {
     contactDisplayed = false;
   }
 };
-
+btnContactRes.addEventListener("click", contactDisplay);
 btnContact.addEventListener("click", contactDisplay);
 btnContactFooter.addEventListener("click", contactDisplay);
 
 //About Section Activation
 let aboutDisplayed = false;
 
-btnAbout.addEventListener("click", function (e) {
+const aboutDisplay = function (e) {
   e.preventDefault();
   if (aboutDisplayed === false) {
     aboutDisplayed = true;
@@ -73,13 +90,54 @@ btnAbout.addEventListener("click", function (e) {
     aboutUs.style.display = "flex";
     aboutUs.style.height = "80vh";
     contactUs.style.display = "none";
+    navDisplayed = false;
+    nav.style.display = "none";
+    btnMenu.innerHTML = `<i class="fas fa-bars"></i>`;
   } else {
     aboutDisplayed = false;
   }
-});
+};
+btnAboutRes.addEventListener("click", aboutDisplay);
+btnAbout.addEventListener("click", aboutDisplay);
+btnAboutFooter.addEventListener("click", aboutDisplay);
 
 //Activating the back buttons
 //about back button
+let careerDisplayed = false;
+const careerDisplay = function (e) {
+  e.preventDefault();
+  if (careerDisplayed === false) {
+    careerDisplayed = true;
+
+    careersDisplay.style.display = "flex";
+    careersDisplay.style.height = "80vh";
+    pricingDisplay.style.display = "none";
+    aboutUs.style.display = "none";
+    contactUs.style.display = "none";
+  } else {
+    careerDisplayed = false;
+    careersDisplay.style.display = "none";
+  }
+};
+btnCareer.addEventListener("click", careerDisplay);
+
+let pricingDisplayed = false;
+const displayPricing = function (e) {
+  e.preventDefault();
+  if (pricingDisplayed === false) {
+    pricingDisplayed = true;
+
+    pricingDisplay.style.display = "flex";
+    pricingDisplay.style.height = "80vh";
+    careersDisplay.style.display = "none";
+    aboutUs.style.display = "none";
+    contactUs.style.display = "none";
+  } else {
+    pricingDisplayed = false;
+    pricingDisplay.style.display = "none";
+  }
+};
+btnPricing.addEventListener("click", displayPricing);
 
 backBtnAbout.addEventListener("click", function (e) {
   e.preventDefault();
@@ -87,6 +145,20 @@ backBtnAbout.addEventListener("click", function (e) {
   if (aboutDisplayed === true) {
     aboutUs.style.display = "none";
   } else {
+  }
+});
+backBtnCareer.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (careerDisplayed === true) {
+    careersDisplay.style.display = "none";
+  }
+});
+backBtnPricing.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (pricingDisplayed === true) {
+    pricingDisplay.style.display = "none";
   }
 });
 //contact back button
