@@ -267,6 +267,11 @@ body {
   z-index: 30;
   text-decoration: none;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .btn-back {
+      font-size: 1.2rem;
+      top: 4rem;
+      left: 4rem; } }
 
 .card {
   perspective: 150rem;
@@ -339,15 +344,15 @@ body {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
         .card__side .card__picture--1 {
-          background-image: url(/img/training.jpg); }
+          background-image: linear-gradient(to right bottom, #ee4536, #920606), url("https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); }
         .card__side .card__picture--2 {
-          background-image: linear-gradient(to right bottom, #b39822, #684c10), url(/img/advisory.jpg); }
+          background-image: linear-gradient(to right bottom, #b39822, #684c10), url("https://images.pexels.com/photos/6781273/pexels-photo-6781273.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); }
         .card__side .card__picture--3 {
-          background-image: linear-gradient(to right bottom, #ee4536, #920606), url(/img/datascience.jpg); }
+          background-image: linear-gradient(to right bottom, #ee4536, #920606), url("https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); }
         .card__side .card__picture--4 {
-          background-image: linear-gradient(to right bottom, #b39822, #684c10), url(/img/research.jpg); }
+          background-image: linear-gradient(to right bottom, #b39822, #684c10), url("https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); }
         .card__side .card__picture--5 {
-          background-image: linear-gradient(to right bottom, #ee4536, #920606), url(/img/application.jpg); }
+          background-image: linear-gradient(to right bottom, #ee4536, #920606), url("https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); }
       .card__side .card__heading {
         font-size: 2rem;
         font-weight: 300;
@@ -941,6 +946,9 @@ header {
       display: flex;
       gap: 2rem; }
 
+.fab {
+  color: rgba(146, 6, 6, 0.7); }
+
 .navigation {
   position: fixed;
   top: 0;
@@ -1044,7 +1052,7 @@ header {
     flex-direction: column;
     align-items: center;
     color: #000;
-    height: 80%;
+    height: 70%;
     justify-content: space-between;
     gap: 2.5rem; }
   .responsive__nav-item {
@@ -1116,17 +1124,21 @@ header {
       font-size: 1.5rem; } }
 
 .section__partner--container {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem; }
+  gap: 3rem;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 3px rgba(146, 6, 6, 0.1); }
   @media only screen and (max-width: 56.25em) {
     .section__partner--container {
       flex-direction: column; } }
 
 @media only screen and (max-width: 56.25em) {
   .partners__logo {
-    transform: scale(0.7); } }
+    transform: scale(0.6); } }
 
 .partners__logo--caption {
   display: none; }

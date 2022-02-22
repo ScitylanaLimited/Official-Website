@@ -99,4 +99,10 @@
   z-index: 30;
   text-decoration: none;
   cursor: pointer;
+
+  @include respond(phone) {
+    font-size: 1.2rem;
+    top: 4rem;
+    left: 4rem;
+  }
 }
